@@ -61,7 +61,7 @@ TLen = Int(floor(T/dt))
     Max_BondDim = zeros(L-1,TLen);
  
 #Local Path
- Path = "C:/Users/snich/Documents/Julia_Programs/Rxn_Diffusion/Schlogl/Stationary_Dists/"
+ Path = " "
  @load(Path*psiName, psi)
 
 # Zinc Path/ Quest Path
@@ -269,11 +269,9 @@ end
 if SaveData == 1
     MinTen = MMDim[1]
     # Local Path ----------------------------------------
-   # PathOut = "C:\\Users\\snich\\Documents\\MATLAB\\Tensor_Networks\\Schlogl\\Figures\\Rate_Constants\\EscapeVaryD\\"
-    # Zinc Path -----------------------------------------
-    # PathOut = "/home/sbn6912/RxnDiffusion/Schlogl/Data/EscapeRates/"
+         # PathOut = " "
     # Quest Path
-     PathOut = "/projects/p31555/RxnDiffusion/Schlogl/Data/EscapeErr_BD/"
+     PathOut = ""
 
     FileOut = "EscapeProb_Err_VBD"*"$M"*"Mol_"*"$L"*"sites_"*"$MinTen"*"BD_Dx"*"$dval"*"_V3.h5"
     fo = h5open(PathOut*FileOut,"w")
@@ -287,10 +285,8 @@ end
 #----------------------------------------------------------------------------
 # This is where the MPS data is saved out too.
 if SavePsi == 1
-    # Local Path ----------------------------------------
-       #PsiPath = "C:\\Users\\snich\\Documents\\MATLAB\\Tensor_Networks\\Schlogl\\Figures\\Distributions\\PsiVaryD_"*"$M"*"Mol_"*"$L"*"sites_Dx"*"$dval"*"\\"
-    # Quest Path
-      PsiPath = "/projects/p31555/RxnDiffusion/Schlogl/Data/Distributions/PsiVaryBD_"*"$M"*"Mol_"*"$L"*"sites_"*"$BD"*"BondDim_"*"$dval"*"Dx/"
+    # Path ----------------------------------------
+       #PsiPath = " "
 end
 
 tTot = @elapsed begin

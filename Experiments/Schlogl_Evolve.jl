@@ -1,15 +1,8 @@
 using ITensors
 using LinearAlgebra
-#using StaticArrays
-#using BenchmarkTools
-#using Plots
-#using Distributions
 using JLD2
 using HDF5
-#using LaTeXStrings
-#using Profile
 using KrylovKit: exponentiate
-#using DelimitedFiles
 include("Tensor_Operations_NoQn.jl")
 include("MPO_Mechanisms.jl")
 
@@ -37,7 +30,6 @@ include("MPO_Mechanisms.jl")
         BD = 20                                         # The bond dimension used for tdvp
     # ----------------------------------------------
       MMDim = [BD,50] # For L < 10                      # Minimum/maximum bond dimensions used if varying BD
-#    MMDim = [24,50] # For L >= 10
 
     A = a*nA*Vol                                        # Number of chemostated species A
     B = b*nA*Vol                                        # Number of chemostated species B
@@ -120,20 +112,7 @@ psiName = "psiStation"*"$MinTen"*"BD_"*"$M"*"Mol_"*"$L"*"sites_Dx"*"$dval"*".jld
 FileName = "TNStruct"*"$MinTen"*"BD_"*"$M"*"Mol_"*"$L"*"sites_Dx"*"$dval"*".h5"
 
 # Local file path --------------------------------------------------------------
-  FilePath = "C:\\Users\\snich\\Documents\\MATLAB\\Tensor_Networks\\Schlogl\\Figures\\Set_S2\\"
-# Zinc file path ---------------------------------------------------------------
-  # FilePath = "/home/sbn6912/RxnDiffusion/Schlogl/Data/StatDists/"
-# Quest file path ---------------------------------------------------------------
-#   FilePath = "/projects/p31555/RxnDiffusion/Schlogl/Data/StatDists/"
-#-------------------------------------------------------------------------------
-
-# --- Construct initial distrbution from well mixed stationary distribution
-
-# Local Path
-#    peqPath = "C:/Users/snich/Documents/Julia_Programs/Rxn_Diffusion/Schlogl/WellMixed_StatDists/"
-    #Pr_Dist= readdlm(peqPath*"Dist_"*"$M"*"Mol.txt", ',', Float64)
-# Zinc/Quest Path
-    #Pr_Dist= readdlm("Dist_"*"$M"*"Mol.txt", ',', Float64)
+  FilePath = "C:\\"
 
     # Generate the random uniform distribution for the first site
     Pr_Dist = rand(n)                               # Generate the random uniform distribution for the first site

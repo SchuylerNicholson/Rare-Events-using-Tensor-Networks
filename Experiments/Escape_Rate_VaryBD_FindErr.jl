@@ -10,8 +10,8 @@ include("MPO_Mechanisms.jl")
 include("Proj_Operator.jl")
 
 
-# The goal is to evolve a collection of rates at fixed L and varying bond dimension -
-# - For each L, find the rate that is within a certain error. Label the corresponding bond dimension d^*
+# The goal is to calculate the rate of transitioning between basins at fixed L and different bond dimension -
+# - For each L, For each set of rates find the rate within fixed error to established rate. Label the corresponding bond dimension d^*
 # - Plot how the bond dimension scales for L
 #
 # Parameters

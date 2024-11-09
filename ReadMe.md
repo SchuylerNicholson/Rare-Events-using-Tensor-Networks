@@ -17,6 +17,24 @@ Results from the paper can be reproduced by running files from the ``Experiments
 
 The stationary distribution can be used as an input into ``Proj_EscapeProb.jl`` to calculate the rate coefficient of transitioning from basin A to basin B
 
-``Escape_Rate_Vary_Diff.jl`` is a variant that was used to calculate the rate coefficient for various diffusion coefficients.
+``Escape_Rate_Vary_Diff.jl`` is a variant that was used to calculate the transition for various diffusion coefficients.
 
-``Escape_Rate_VaryBD_FindErr
+``Escape_Rate_VaryBD_FindErr`` is another variant used to calculate transition rates for a fixed number of voxels but varying bond-dimension.
+
+# Referencing
+If you found this repository useful please consider citing,
+
+Nicholson, Schuyler B., and Todd R. Gingrich. "Quantifying rare events in stochastic reaction-diffusion dynamics using tensor networks." Physical Review X 13, no. 4 (2023): 041006.
+
+```
+@article{nicholson2023quantifying,
+  title={Quantifying rare events in stochastic reaction-diffusion dynamics using tensor networks},
+  author={S.B.~Nicholson, and T.R.~Gingrich},
+  journal={Physical Review X},
+  volume={13},
+  number={4},
+  pages={041006},
+  year={2023},
+  publisher={APS}
+}
+```

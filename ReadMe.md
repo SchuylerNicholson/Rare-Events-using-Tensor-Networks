@@ -15,7 +15,7 @@ Results from the paper can be reproduced by running files from the ``Experiments
 
 ``Schlogl_Evolve.jl`` Will run an initially uniform distribuiton for a set amount of time, eventually reaching the stationary distribution.
 
-The stationary distribution can be used as an input into ``Proj_EscapeProb.jl`` to calculate the rate coefficient of transitioning from basin A to basin B
+The stationary distribution can be used as an input into ``Proj_EscapeProb.jl`` to calculate the rate of transitioning from basin A to basin B
 
 ``Escape_Rate_Vary_Diff.jl`` is a variant that was used to calculate the transition for various diffusion coefficients.
 

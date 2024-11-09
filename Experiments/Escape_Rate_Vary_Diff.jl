@@ -60,12 +60,10 @@ if Continue_Evolution == 0
 else
     MinTen = MMDim[1]
     to = 9990
-    psiName = "psiStation"*"$M"*"Mol_"*"$L"*"sites_"*"$to"*"Time.jlds"
+    psiName = " "
     DataName = "EscapeProb_VD"*"$M"*"Mol_"*"$L"*"sites_"*"$MinTen"*"BD_Dx"*"$dval"*"_V3.h5"
     # Local Path
-      EscPath = "C:\\Users\\snich\\Documents\\Julia_Programs\\Rxn_Diffusion/Schlogl/Data/VaryDiff_L"*"$L"*"_BD"*"$MinTen"*"/"
-    #Quest Path
-#      EscPath = "/projects/p31555/RxnDiffusion/Schlogl/Data/EscapeRates/"
+      EscPath = "  "
 
     fid = h5open(EscPath*DataName,"r")
     ProbAB = read(fid,"ReactCoordV2")
@@ -87,7 +85,7 @@ else
 end
 
 #Local Path
- Path = "C:/Users/snich/Documents/Julia_Programs/Rxn_Diffusion/Schlogl/Stationary_Dists/"
+ Path = " "
  @load(Path*psiName, psi)
 
 # Zinc Path/ Quest Path
@@ -296,13 +294,8 @@ end
 #---------------------------------------------------------------
 if SaveData == 1
     MinTen = MMDim[1]
-    # Local Path ----------------------------------------
-    PathOut = "C:\\Users\\snich\\Documents\\MATLAB\\Tensor_Networks\\Schlogl\\Figures\\Rate_Constants\\EscapeVaryD\\"
-    # Zinc Path -----------------------------------------
-    # PathOut = "/home/sbn6912/RxnDiffusion/Schlogl/Data/EscapeRates/"
-    # Quest Path
-    #PathOut = "/projects/p31555/RxnDiffusion/Schlogl/Data/EscapeRates/"
-
+    # Path ----------------------------------------
+    PathOut = " "
     FileOut = "EscapeProb_VD"*"$M"*"Mol_"*"$L"*"sites_"*"$MinTen"*"BD_Dx"*"$dval"*"_V3.h5"
     fo = h5open(PathOut*FileOut,"w")
     write(fo,"ReactCoordV2",[ProbAB ti])
@@ -316,9 +309,7 @@ end
 # This is where the MPS data is saved out too.
 if SavePsi == 1
     # Local Path ----------------------------------------
-       PsiPath = "C:\\Users\\snich\\Documents\\MATLAB\\Tensor_Networks\\Schlogl\\Figures\\Distributions\\PsiVaryD_"*"$M"*"Mol_"*"$L"*"sites_Dx"*"$dval"*"\\"
-    # Quest Path
-      #PsiPath = "/projects/p31555/RxnDiffusion/Schlogl/Data/Distributions/PsiVaryD_"*"$M"*"Mol_"*"$L"*"sites_"*"$BD"*"BondDim_"*"$dval"*"Dx/"
+       PsiPath = " "
 end
 
 

@@ -68,10 +68,8 @@ else
     to = 110
     psiName = "psiStation"*"$M"*"Mol_"*"$L"*"sites_"*"$to"*"Time.jlds"
     DataName = "EscapeProb_Hchg"*"$M"*"Mol_"*"$L"*"sites_"*"$MinTen"*"BD_Dx"*"$dval"*".h5":
-    # Local Path
-    #EscPath = "C:\\Users\\snich\\Documents\\Julia_Programs\\Rxn_Diffusion\\Schlogl\\Data\\"
-    #Quest Path
-    EscPath = "/projects/p31555/RxnDiffusion/Schlogl/Data/EscapeRates/"
+    # Path
+    #EscPath = ""
 
     fid = h5open(EscPath*DataName,"r")
     ProbAB = read(fid,"ReactCoordV2")
@@ -96,14 +94,6 @@ else
     end
 end
 @show size(SweepTimes)
-
-
-#Local Path
-#Path = "C:\\Users\\snich\\Documents\\Julia_Programs\\Rxn_Diffusion\\Schlogl\\Stationary_Dists\\"
-#@load(Path*psiName, psi)
-
-# Zinc Path/ Quest Path
-@load(psiName, psi)
 
 sites = siteinds(psi::MPS)  # Just defining the basis for the space you are in
 psi0 = deepcopy(psi)
@@ -308,12 +298,8 @@ end
 
 if SaveData == 1
     MinTen = MMDim[1]
-    # Local Path ----------------------------------------
-      #PathOut = "C:\\Users\\snich\\Documents\\MATLAB\\Tensor_Networks\\Schlogl\\Figures\\Rate_Constants\\ProjEscape_S2\\"
-    # Zinc Path -----------------------------------------
-    # PathOut = "/home/sbn6912/RxnDiffusion/Schlogl/Data/EscapeRates/"
-    # Quest Path
-     PathOut = "/projects/p31555/RxnDiffusion/Schlogl/Data/EscapeRates/"
+    # Path
+     PathOut = " "
 
     FileOut = "EscapeProb_Hchg"*"$M"*"Mol_"*"$L"*"sites_Vol"*"$vsim"*".h5"
     fo = h5open(PathOut*FileOut,"w")
@@ -325,10 +311,8 @@ if SaveData == 1
 end
 #----------------------------------------------------------------------------
 if SavePsi == 1
-    # Local Path ----------------------------------------
-      # PsiPath = "C:\\Users\\snich\\Documents\\MATLAB\\Tensor_Networks\\Schlogl\\Figures\\Distributions\\PsiOut_"*"$M"*"Mol_"*"$L"*"sites_Dx"*"$dval"*"\\"
-    # Quest Path
-      PsiPath = "/projects/p31555/RxnDiffusion/Schlogl/Data/Distributions/PsiOut_"*"$M"*"Mol_"*"$L"*"sites_"*"$BD"*"BondDim/"
+    # Path Out
+      PsiPath = " "
 end
 
 # Evolve |ψ⟩
